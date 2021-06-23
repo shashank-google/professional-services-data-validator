@@ -106,6 +106,12 @@ Below is the expected configuration for each type.
 }
 ```
 
+Save above connection configuration as a json file say spanner-conn.json
+
+```
+cat spanner-conn.json | data-validation connections add --connection-name spanner-conn Spanner
+```
+
 ###  User/Service account needs following Spanner role to run this validator tool:
 * roles/spanner.databaseReader
 
@@ -204,6 +210,12 @@ Then `pip install pyodbc`.
     "password": "my-password",
     "database":"my-db"
 }
+```
+
+Save above connection configuration as json file (say mysql-conn.json)
+
+```
+cat mysql-conn.json | data-validation connections add --connection-name mysql-conn MySQL
 ```
 
 ## Redshift
